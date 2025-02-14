@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<h2>Edit profile</h2>
+<% if (error) { %>
+  <p style="color:red;"><%= error %></p>
+<% } %>
+<form action="/profile?_method=PUT" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" name="username" value="<%= user.username %>" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" name="email" value="<%= user.email %>" required>
+  <br>
+  <button type="submit">Update</button>
+</form>
+<%- include('partials/footer') %>

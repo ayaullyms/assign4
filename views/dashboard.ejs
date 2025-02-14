@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<div class="profile-container">
+  <h2>Profile</h2>
+  <p>Welcome to your profile, <%= user.username %>!</p>
+  <p>Your email: <%= user.email %></p>
+  <div class="profile-actions">
+    <a href="/profile/edit" class="btn edit-btn">Edit profile</a>
+    <form action="/profile?_method=DELETE" method="POST" class="inline-form">
+      <a href="/delete-account" class="btn delete-btn">Delete account</a>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
